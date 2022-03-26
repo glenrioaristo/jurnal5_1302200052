@@ -17,6 +17,10 @@ namespace modul5_1302200052
         {
             Random random = new Random();
             this.id = random.Next(10000, 99999);
+            if (title == "")
+                throw new NullReferenceException("title tidak boleh null");
+            if (title.Length > 200)
+                throw new Exception("panjang text maksimal 200");
             this.title = title;
             this.playCount = 0;
 
@@ -24,6 +28,10 @@ namespace modul5_1302200052
 
         public void IncreasePlayCount(int n)
         {
+            if (n == 0)
+                throw new NullReferenceException("angka tidak boleh null");
+            if (title.Length > 25000000)
+                throw new Exception("panjang text maksimal 200");
             playCount = playCount + n;
         }
 

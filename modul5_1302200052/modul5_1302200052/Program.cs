@@ -15,7 +15,7 @@ namespace modul5_1302200052
             SayaTubeVideo video7 = new SayaTubeVideo("Review Film Ironman oleh Glen Rio Aristo");
             SayaTubeVideo video8 = new SayaTubeVideo("Review Film One piece oleh Glen Rio Aristo");
             SayaTubeVideo video9 = new SayaTubeVideo("Review Film Naruto oleh Glen Rio Aristo");
-            SayaTubeVideo video10 = new SayaTubeVideo("Review Film  oleh Glen Rio Aristo");
+            SayaTubeVideo video10 = new SayaTubeVideo("Review Film ggs oleh Glen Rio Aristo");
 
             SayaTubeUser namaUser = new SayaTubeUser("Glen Rio aristo");
             video1.IncreasePlayCount(1);
@@ -27,7 +27,7 @@ namespace modul5_1302200052
             video7.IncreasePlayCount(2);
             video8.IncreasePlayCount(3);
             video9.IncreasePlayCount(5);
-           video10.IncreasePlayCount(2);
+            video10.IncreasePlayCount(2);
 
             namaUser.AddVideo(video1);
             namaUser.AddVideo(video2);

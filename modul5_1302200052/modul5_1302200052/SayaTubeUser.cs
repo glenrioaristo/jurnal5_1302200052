@@ -12,10 +12,14 @@ namespace modul5_1302200052
         private String username;
         private List<SayaTubeVideo> uploadedVideos;
 
-        public SayaTubeUser (String username)
+        public SayaTubeUser(String username)
         {
             Random random = new Random();
             this.id = random.Next(10000, 99999);
+            if (username == "")
+                throw new NullReferenceException("username tidak boleh null");
+            if (username.Length > 100)
+                throw new Exception("panjang text maksimal 100");
             this.uploadedVideos = new List<SayaTubeVideo>();
             this.username = username;
         }
@@ -29,9 +33,11 @@ namespace modul5_1302200052
             return hasil;
         }
 
-        public void AddVideo(SayaTubeVideo a)
+        public void AddVideo(SayaTubeVideo v)
         {
-            uploadedVideos.Add(a);
+            if (v == null)
+                throw new NullReferenceException(" tidak boleh null");
+            uploadedVideos.Add(v);
         }
 
         public void PrintAllVideoPlaycount()
@@ -40,9 +46,9 @@ namespace modul5_1302200052
             for (int i = 0; i < uploadedVideos.Count; i++)
             {
                 Console.WriteLine("Video " + (i + 1) + " Judul: " + uploadedVideos[i].getTitle());
-                Console.WriteLine("play Count" + uploadedVideos[i].getPlayCount());
+                Console.WriteLine("play Count :" + uploadedVideos[i].getPlayCount());
                 Console.WriteLine();
-                
+
             }
             Console.WriteLine("Total semua playcount : " + GetTotalVideoPlay());
 
